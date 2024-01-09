@@ -1,10 +1,12 @@
-import Navbar from '@/components/shared/navbar'
+import Feauture from '@/components/shared/feauture'
+import Hero from '@/components/shared/hero'
 import React from 'react'
 
 const MainPage = () => {
   return (
-    <div>
-      
+    <div >
+       <Hero />
+       <Feauture />
     </div>
   )
 }
