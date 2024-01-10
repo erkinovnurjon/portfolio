@@ -34,8 +34,8 @@ const Navbar = () => {
               </PopoverTrigger>
               <PopoverContent className='w-32 '>
                 <ul className=' flex flex-col text-xl font-[Heebo]  font-medium w-min'>
-                  <Link href={'/works'} className=' hover:underline transition' >
-                    works
+                  <Link href={'/projects'} className=' hover:underline transition' >
+                    projects
                   </Link>
                   <Link href={'/blog'} className=' hover:underline transition' >
                     blog
@@ -52,8 +52,8 @@ const Navbar = () => {
        
 
       <ul className='md:flex justify-end items-center hidden text-xl font-[Heebo] gap-5 font-medium w-min'>
-      <Link href={'/works'} className=' hover:underline transition' >
-        works
+      <Link href={'/projects'} className=' hover:underline transition' >
+        projects
       </Link>
       <Link href={'/blog'} className=' hover:underline transition' >
         blog
