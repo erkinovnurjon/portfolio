@@ -1,4 +1,5 @@
 import GoogleDrive from "@/components/shared/projects/google-drive"
+import NajotTalim from "@/components/shared/projects/najot-talim"
 import Netflix from "@/components/shared/projects/netflix"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -22,9 +23,9 @@ const Projects = () => {
             <GoogleDrive />
             <Netflix />
           </TabsContent>
-          <TabsContent value="react">
+          <TabsContent value="react" className=" w-full">
             <div>
-
+              <NajotTalim />
             </div>
           </TabsContent>
         </Tabs>

@@ -37,7 +37,7 @@ const GoogleDrive = () => {
                                 <CarouselNext />
                           </div>
                     </Carousel>
-                    <div className=" flex flex-col space-y-4 w-full my-4 md:w-1/2 h-full dark:bg-gradient-to-t dark:from-black dark:to-violet-900 p-7 md:p-8 rounded-xl  ">
+                    <div className=" flex flex-col space-y-4 border w-full my-4 md:w-1/2 h-full dark:bg-gradient-to-t dark:from-black dark:to-violet-900 p-7 md:p-8 rounded-xl  ">
                           <h1 className="text-2xl font-bold">About the project</h1>
                           <p >
                                 In the Google Drive project I used version 14 of NextJs,
