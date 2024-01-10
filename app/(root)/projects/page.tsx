@@ -1,4 +1,5 @@
 import GoogleDrive from "@/components/shared/projects/google-drive"
+import Netflix from "@/components/shared/projects/netflix"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 
@@ -19,6 +20,7 @@ const Projects = () => {
           </TabsList>
           <TabsContent value="fullstack" className=" w-full ">
             <GoogleDrive />
+            <Netflix />
           </TabsContent>
           <TabsContent value="react">
             <div>
