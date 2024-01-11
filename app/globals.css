@@ -74,3 +74,48 @@
     @apply bg-background text-foreground;
   }
 }
+
+.bg-black-gradient {
+  background: linear-gradient(to top, #fff -270%, #6d6d6d -78%, #11101d 100%);
+}
+
+.bg-discount-gradient {
+  background: linear-gradient(130deg, #272727 0%, #11101d 100%);
+}
+
+.text-gradient {
+  background: radial-gradient(64.18% 64.18% at 71.16% 35.68%,
+      #def9fa 0.89%,
+      #bef3f5 17.23%,
+      #9dedf0 42.4%,
+      #7de7eb 55.12%,
+      #5ce1e6 71.54%,
+      #33bbcf 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214df6 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(157.81deg,
+      #def9fa -43.27%,
+      #bef3f5 -21.24%,
+      #9dedf0 12.19%,
+      #7de7eb 29.82%,
+      #5ce1e6 51.94%,
+      #33bbcf 90.29%);
+}

@@ -23,6 +23,7 @@ const Hero = () => {
     <div className=' container mx-auto'>
 
     <div className= 'md:flex flex-row justify-start md:justify-between items-center py-7'>
+      
         <div className=' md:w-1/2 w-full flex flex-col justify-center md:flex md:justify-start'>
         <h1 className='  md:text-6xl text-4xl py-1 md:py-4 text-center md:text-start font-bold font-[Heebo] leading-[50px] text-[#21243d] dark:text-[#e3e3f19f]'>
           Hi, I am John,

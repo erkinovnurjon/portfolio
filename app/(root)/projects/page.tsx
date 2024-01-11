@@ -2,6 +2,8 @@ import GoogleDrive from "@/components/shared/projects/google-drive"
 import Matras from "@/components/shared/projects/matras"
 import NajotTalim from "@/components/shared/projects/najot-talim"
 import Netflix from "@/components/shared/projects/netflix"
+import Robot from "@/components/shared/projects/robo"
+import Shop from "@/components/shared/projects/shop"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 
@@ -28,6 +30,12 @@ const Projects = () => {
             <div>
               <Matras />
               <NajotTalim />
+            </div>
+          </TabsContent>
+          <TabsContent value="next" className=" w-full">
+            <div>
+              <Shop />
+              <Robot />
             </div>
           </TabsContent>
         </Tabs>
