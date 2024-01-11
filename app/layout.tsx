@@ -4,6 +4,7 @@ import './globals.css'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import Navbar from '@/components/shared/navbar'
 import Footer from '@/components/shared/footer'
+import NextTopLoader from 'nextjs-toploader'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +27,8 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        > <Navbar />
+        >  <NextTopLoader />
+           <Navbar />
           {children}
           <Footer />
         </ThemeProvider>
