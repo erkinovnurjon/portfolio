@@ -3,7 +3,7 @@ import { Label } from '@/components/ui/label'
 
 const Forma = () => {
   return (
-        <form className='w-[60%]'>
+        <form className='w-full'>
             <div className='flex justify-center gap-10 items-center'>
               <div className='w-full p-5 '>
                 <Label>

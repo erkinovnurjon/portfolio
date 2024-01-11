@@ -1,6 +1,8 @@
 
 
+import CheckBoxComp from '@/components/shared/checkbox'
 import Forma from '@/components/shared/form'
+import { Checkbox } from '@/components/ui/checkbox'
 import { InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
 import { LocateIcon, MapPin, MessageCircleIcon, PhoneCallIcon } from 'lucide-react'
 import Image from 'next/image'
@@ -16,7 +18,7 @@ const Contact = () => {
         Any question or remarks? Just write us a message!
       </p>
       <div className='flex justify-between my-4 '>
-        <div className=' p-5 border relative w-[45%]'>
+        <div className=' p-5 border relative w-[41%] h-full'>
           
             <h1 className="text-3xl leading-12 font-['Poppins'] font-semibold text-white ">
               Contact Information
@@ -51,7 +53,11 @@ const Contact = () => {
           width={150} height={150}
           className='absolute  bottom-16 right-10' />
         </div>
-      <Forma />
+      <div className='w-[70%]'>
+          <Forma />
+          <CheckBoxComp />
+      </div>
+
       </div>
 
     </div>
