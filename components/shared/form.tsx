@@ -5,7 +5,7 @@ const Forma = () => {
   return (
         <form className='w-full'>
             <div className='flex justify-center gap-10 items-center'>
-              <div className='w-full p-5 '>
+              <div className='w-full px-5 py-0 '>
                 <Label>
                   First Name
                 </Label>

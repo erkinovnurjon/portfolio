@@ -2,9 +2,10 @@
 
 import CheckBoxComp from '@/components/shared/checkbox'
 import Forma from '@/components/shared/form'
-import { Checkbox } from '@/components/ui/checkbox'
+import TextAreaComp from '@/components/shared/textarea'
+
 import { InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
-import { LocateIcon, MapPin, MessageCircleIcon, PhoneCallIcon } from 'lucide-react'
+import {  MapPin, MessageCircleIcon, PhoneCallIcon } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 
@@ -18,7 +19,7 @@ const Contact = () => {
         Any question or remarks? Just write us a message!
       </p>
       <div className='flex justify-between my-4 '>
-        <div className=' p-5 border relative w-[41%] h-full'>
+        <div className=' p-5 border relative w-[41%] rounded-md h-full'>
           
             <h1 className="text-3xl leading-12 font-['Poppins'] font-semibold text-white ">
               Contact Information
@@ -38,7 +39,7 @@ const Contact = () => {
               <MapPin className='h-6 w-6' /> 132 Dartmouth Street Boston, <br /> Massachusetts 02156 United States
             </span>
           </div>
-          <div className='flex items-center justify-start w-1/2 md:py-12 gap-5  '>
+          <div className='flex items-center justify-start w-1/2 md:pt-36 md:pb-6  gap-5  '>
             <TwitterLogoIcon className='h-8 w-8 hover:translate-y-1 hover:transition ' />
             <InstagramLogoIcon className='h-8 w-8 hover:translate-y-1 hover:transition ' />
             <LinkedInLogoIcon className='h-8 w-8 hover:translate-y-1 hover:transition ' />
@@ -56,6 +57,7 @@ const Contact = () => {
       <div className='w-[70%]'>
           <Forma />
           <CheckBoxComp />
+          <TextAreaComp />
       </div>
 
       </div>
