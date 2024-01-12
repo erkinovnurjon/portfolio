@@ -4,7 +4,7 @@ import { Button } from "../ui/button"
 
 const TextAreaComp = () => {
       return (
-            <div className="grid w-full gap-1.5 p-4">
+            <div className="grid w-full gap-1.5 md:p-4 p-0">
                   <Label htmlFor="message-2">Your Message</Label>
                   <Textarea className="my-2" placeholder="Type your message here." id="message-2" />
                   <p className="text-sm text-muted-foreground">
