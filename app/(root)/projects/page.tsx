@@ -1,22 +1,19 @@
-import GoogleDrive from "@/components/shared/projects/google-drive"
-import Matras from "@/components/shared/projects/matras"
-import Movie from "@/components/shared/projects/movie"
-import NajotTalim from "@/components/shared/projects/najot-talim"
-import Netflix from "@/components/shared/projects/netflix"
-import Boomshop from "@/components/shared/projects/node"
-import Robot from "@/components/shared/projects/robo"
-import Shop from "@/components/shared/projects/shop"
-import Youtube from "@/components/shared/projects/tube"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-
-
-
+import GoogleDrive from "@/components/shared/projects/google-drive";
+import Matras from "@/components/shared/projects/matras";
+import Movie from "@/components/shared/projects/movie";
+import NajotTalim from "@/components/shared/projects/najot-talim";
+import Netflix from "@/components/shared/projects/netflix";
+import Boomshop from "@/components/shared/projects/node";
+import Robot from "@/components/shared/projects/robo";
+import Shop from "@/components/shared/projects/shop";
+import Youtube from "@/components/shared/projects/tube";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Projects = () => {
   return (
-    <div className='container mx-auto my-4 md:my-12'>
-         <h1 className='text-3xl md:text-5xl font-bold'>Projects</h1>
-         <div>
+    <div className="container mx-auto my-4 md:my-12">
+      <h1 className="text-3xl md:text-5xl font-bold">Projects</h1>
+      <div>
         <Tabs defaultValue="fullstack" className="w-full my-4 md:my-12">
           <TabsList className=" md:w-[500px] w-full flex gap-0 md:gap-7">
             <TabsTrigger value="fullstack">Full Stack</TabsTrigger>
@@ -49,14 +46,13 @@ const Projects = () => {
           </TabsContent>
           <TabsContent value="node" className=" w-full">
             <div>
-             <Boomshop />
+              <Boomshop />
             </div>
           </TabsContent>
         </Tabs>
-         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
-
+export default Projects;

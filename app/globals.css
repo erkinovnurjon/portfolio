@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -9,63 +9,63 @@
 
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
- 
+
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
- 
+
     --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
- 
+
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
- 
+
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
- 
+
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
- 
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
- 
+
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
- 
+
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
- 
+
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
- 
+
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
- 
+
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
- 
+
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
- 
+
     --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
- 
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
- 
+
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
@@ -84,13 +84,15 @@
 }
 
 .text-gradient {
-  background: radial-gradient(64.18% 64.18% at 71.16% 35.68%,
-      #def9fa 0.89%,
-      #bef3f5 17.23%,
-      #9dedf0 42.4%,
-      #7de7eb 55.12%,
-      #5ce1e6 71.54%,
-      #33bbcf 100%);
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.68%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.4%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -111,13 +113,15 @@
 }
 
 .bg-blue-gradient {
-  background: linear-gradient(157.81deg,
-      #def9fa -43.27%,
-      #bef3f5 -21.24%,
-      #9dedf0 12.19%,
-      #7de7eb 29.82%,
-      #5ce1e6 51.94%,
-      #33bbcf 90.29%);
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
 }
 *,
 *:before,
@@ -143,8 +147,8 @@
   transition: background-color 1s;
   cursor: pointer;
 }
-@media only screen and (max-width:768px) {
-  .demo{
+@media only screen and (max-width: 768px) {
+  .demo {
     width: 100%;
     height: 44px;
   }
@@ -258,7 +262,6 @@
   transition: transform 0.3s 5s;
 }
 
-
 .demo__drone {
   position: absolute;
   left: 16px;
@@ -270,11 +273,7 @@
   fill: none;
 }
 
-
-
-
 @-webkit-keyframes tiltAnim {
-
   8%,
   24% {
     transform: rotate(0);
@@ -296,7 +295,6 @@
 }
 
 @keyframes tiltAnim {
-
   8%,
   24% {
     transform: rotate(0);
@@ -317,14 +315,11 @@
   }
 }
 
-
 .demo.s--processing .demo__drone {
   transform-origin: 50% 100%;
   -webkit-animation: tiltAnim 3.8s 1.2s;
   animation: tiltAnim 3.8s 1.2s;
 }
-
-
 
 .demo.s--processing .demo__drone-leaving {
   transform: translate(150px, -150px) rotate(20deg) scale(0.3);
@@ -351,7 +346,6 @@
   fill: #61d4f1;
 }
 
-
 .demo.s--processing .demo__drone-green {
   fill: #53e2c2;
   transition: fill 1s 4.6s;
@@ -366,7 +360,6 @@
 }
 
 @-webkit-keyframes revertAnim {
-
   40%,
   45% {
     transform: translate(-426px, 0);
@@ -382,7 +375,6 @@
 }
 
 @keyframes revertAnim {
-
   40%,
   45% {
     transform: translate(-426px, 0);
@@ -489,7 +481,6 @@
 }
 
 @-webkit-keyframes grabAnim {
-
   40%,
   59.999% {
     --grabY: 15px;
@@ -504,7 +495,6 @@
 }
 
 @keyframes grabAnim {
-
   40%,
   59.999% {
     --grabY: 15px;
@@ -583,13 +573,11 @@
   height: 100%;
   opacity: 0;
   transform: translateY(20px);
-  will-change:
-    opacity, transform;
+  will-change: opacity, transform;
   pointer-events: none;
 }
 
 @-webkit-keyframes textAnimation {
-
   20%,
   80% {
     opacity: 1;
@@ -603,7 +591,6 @@
 }
 
 @keyframes textAnimation {
-
   20%,
   80% {
     opacity: 1;
@@ -669,7 +656,6 @@
 }
 
 @-webkit-keyframes dotAnimation {
-
   10%,
   90% {
     opacity: 0;
@@ -682,7 +668,6 @@
 }
 
 @keyframes dotAnimation {
-
   10%,
   90% {
     opacity: 0;
@@ -734,16 +719,13 @@
   right: 5px;
 }
 
-
-
-
 /* -- External Social Link CSS Styles -- */
 
 #source-link {
   top: 120px;
 }
 
-#source-link>i {
+#source-link > i {
   color: rgb(94, 106, 210);
 }
 
@@ -751,18 +733,16 @@
   top: 65px;
 }
 
-#yt-link>i {
+#yt-link > i {
   color: rgb(219, 31, 106);
-
 }
 
 #Fund-link {
   top: 10px;
 }
 
-#Fund-link>i {
+#Fund-link > i {
   color: rgb(255, 251, 0);
-
 }
 
 .meta-link {
@@ -788,13 +768,13 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.meta-link>i,
-.meta-link>span {
+.meta-link > i,
+.meta-link > span {
   height: 20px;
   line-height: 20px;
 }
 
-.meta-link>span {
+.meta-link > span {
   color: white;
   font-family: "Rubik", sans-serif;
   transition: color 600ms;
