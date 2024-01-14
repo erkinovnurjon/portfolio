@@ -27,7 +27,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >  <NextTopLoader />
+        >  <NextTopLoader  />
            <Navbar />
           {children}
           <Footer />

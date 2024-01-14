@@ -1,22 +1,28 @@
 "use client"
 
 import Image from 'next/image'
-import { Button } from '../ui/button';
+import BublyButton from './BublyButton';
 
 
-const Hero = () => {
+
+const Hero = ({stopLoader} : {stopLoader : () => void}) => {
+
+  
 
   const handleDownload = () => {
+     
     const downloadFile = () => {
       const link = document.createElement('a');
-      link.href = '/resume.pdf'; // Fayl manzili
-      link.setAttribute('download', 'resume.pdf'); // Fayl nomi
+      link.href = '/resume.pdf';
+      link.setAttribute('download', 'resume.pdf');
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+      stopLoader()
     };
 
-    downloadFile();
+    
+    
   };
 
   return (
@@ -33,12 +39,10 @@ const Hero = () => {
         <p className="font-[Heebo] text-xl py-1 md:py-4 md:text-2xl text-[#21243d] dark:text-[#e3e3f19f] text-center md:text-start  md:w-2/3 pt-5">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
        </p>
-        <button
-         onClick={handleDownload}
-        className=' px-3 py-4 text-center w-full md:w-1/2  font-medium text-white bg-[#ff6464]  my-4    rounded-sm
-         hover:bg-orange-900/80 transition'>
-          Download Resume
-       </button>
+          <div role='button' className='   my-4 md:my-6' onClick={handleDownload}>
+       <BublyButton  />
+
+       </div>
 
         </div>
         <div className=' hidden md:flex'>

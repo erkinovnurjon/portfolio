@@ -57,22 +57,22 @@ const Contact: FC = () => {
 
   return  (
     <div className=' container mx-auto my-6'>
-      <h1 className="text-4xl font-['Poppins'] text-center font-bold ">
+      <h1 className="text-4xl font-['Heebo']  text-[#21243d] dark:text-slate-500 text-center font-bold ">
         Contact me
       </h1>
 
-      <p className="text-center text-lg font-['Poppins'] py-2 font-medium text-[#717171] ">
+      <p className="text-center text-lg font-['Heebo']  text-[#21243d] dark:text-slate-500 py-2 font-medium  ">
         Any question or remarks? Just write us a message!
       </p>
       <div className='flex md:flex-row flex-col justify-between my-4 '>
         <div className=' p-5 border relative w-full md:w-[41%] rounded-md h-full'>
-          <h1 className="text-3xl leading-12 font-['Poppins'] font-semibold text-white ">
+          <h1 className="text-3xl leading-12 font-['Heebo']  text-[#21243d] dark:text-slate-500 font-semibold  ">
             Contact Information
           </h1>
-          <p className="text-lg leading-9 py-3 font-['Poppins'] text-[#c9c9c9] ">
+          <p className="text-lg leading-9 py-3 font-['Heebo']  text-[#21243d] dark:text-slate-500 ">
             Say something to start a live chat!
           </p>
-          <div className='flex flex-col  gap-8'>
+          <div className="flex flex-col  gap-8 font-['Heebo']  text-[#21243d] dark:text-slate-500">
             <span className='flex gap-4 items-center text-sm'>
               <PhoneCallIcon /> +998 93 336 59 06
             </span>
@@ -107,14 +107,14 @@ const Contact: FC = () => {
         <div className='md:w-[70%] w-full'>
           {isFormSubmitted ? (
            <div className='flex justify-center  items-center'>
-          <h1 className='text-center text-4xl font-bold  px-2 md:px-5'>
+              <h1 className="text-center text-4xl font-bold font-[' Heebo']  text-[#21243d] dark:text-slate-500  px-2 md:px-5">
               Ma'lumotlaringiz muvaffaqiyatli yuborildi!
         </h1>
             
            </div>
           ) : (
             <form className='w-full' onSubmit={onSubmit}>
-              <div className='flex flex-col md:flex-row justify-center md:gap-10 gap-2 items-center'>
+                <div className="flex flex-col md:flex-row font-[' Heebo']  text-[#21243d] dark:text-slate-500 justify-center md:gap-10 gap-2 items-center">
                 <div className='w-full md:px-5 md:py-0 '>
                   <Label htmlFor='firstName'>First Name</Label>
                   <Input
@@ -166,10 +166,10 @@ const Contact: FC = () => {
 
             
               {/* Textarea comp */}
-              <div className="grid w-full gap-1.5 md:p-4 md:py-6 p-0">
-                <Label htmlFor="message-2">For suggestions</Label>
+              <div className="grid w-full gap-1.5 md:p-4 md:py-6 p-0 ">
+                  <Label className="font-['Heebo'] text-xl  text-[#21243d] dark:text-slate-500" htmlFor="message-2">For suggestions</Label>
                 <Textarea
-                  className="my-2 border-t-0 border-x-0"
+                    className="my-2 border-t-0 border-x-0 font-['Heebo']  text-[#21243d] dark:text-slate-500"
                   placeholder="Your Message"
                   id="message-2"
                 />
