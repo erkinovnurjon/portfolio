@@ -1,6 +1,11 @@
+import Aos from "aos";
 import { Separator } from "../ui/separator";
+import { useEffect } from "react";
 
 const Feauture = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div
       className=" dark:bg-[#0A0A0A]
@@ -17,6 +22,10 @@ const Feauture = () => {
         </div>
         <div className=" md:flex flex-col md:flex-row justify-between items-center my-6">
           <div
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500"
             className=" bg-white dark:bg-gradient-to-r dark:from-black dark:to-violet-900
            w-full md:w-[600px] md:h-[250px] py-4  my-8 px-8 rounded"
           >
@@ -36,6 +45,10 @@ const Feauture = () => {
           </div>
 
           <div
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500"
             className=" bg-white dark:bg-gradient-to-r dark:from-black dark:to-violet-900
              w-full md:w-[600px] md:h-[250px] py-4 px-8 rounded"
           >

@@ -5,8 +5,44 @@ import BublyButton from "./BublyButton";
 import { useToast } from "../ui/use-toast";
 import { ToastAction } from "../ui/toast";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { useRef,  useEffect } from "react";
+import { useGSAP} from "@gsap/react"
+
+import gsap from "gsap";
 
 const Hero = () => {
+const boxRef = useRef(null)
+
+// useGSAP(() => {
+//   gsap.from(textRef.current, {
+//     opacity: 0,
+//     x: -100,
+//     rotation: -360,
+//     duration: 1,
+//     ease: 'power.out',
+//   });
+// }, { scope: textRef });
+
+useGSAP(
+  () => {
+    gsap.from(boxRef.current, {
+      scale: 1.2,
+      opacity: 0,
+      duration: 1,
+      ease: 'power.out',
+    });
+
+    gsap.to(boxRef.current, {
+      scale: 1,
+      opacity: 1,
+      duration: 1,
+      ease: 'power.out',
+    });
+  },
+  //@ts-ignore
+  { targets: boxRef, start: 'hover', end: 'unhover' }
+);
+  //title
   const [title] = useTypewriter({
     words: ["Software Engineer ", "Frontend Developer", "Krasavchik"],
     // @ts-ignore
@@ -15,6 +51,7 @@ const Hero = () => {
     deleteSpeed: 20,
   });
   const { toast } = useToast();
+  //download
   const handleDownload = () => {
     let fileDownloaded = false;
     const downloadFile = () => {
@@ -34,7 +71,7 @@ const Hero = () => {
         });
       } else {
         toast({
-          title: "Downloaded",
+          title: "Error",
           description: "bu avval downloaded",
           action: <ToastAction altText="Try again">Try again</ToastAction>,
         });
@@ -43,12 +80,15 @@ const Hero = () => {
   };
 
   return (
-    <div className=" container mx-auto">
+    <div className=" container mx-auto" ref={boxRef} >
       <div className="md:flex flex-row justify-start md:justify-between items-center py-7">
         <div className=" md:w-1/2 w-full flex flex-col justify-center md:flex md:justify-start">
-          <h1 className="  md:text-6xl text-4xl py-1 md:py-5 text-center md:text-start font-bold font-[Heebo] leading-[50px] text-[#21243d] dark:text-[#e3e3f19f]">
-            <span>Hi , I'm Nurjon</span>
-            <br />
+          <h1
+            data-aos="fade-left"
+            className="  md:text-6xl text-4xl py-1 md:py-5 text-center md:text-start font-bold font-[Heebo] leading-[50px] text-[#21243d] dark:text-[#e3e3f19f]"
+          >
+            <span className=" block py-2 md:py-4" >Hi , I'm Nurjon</span>
+            
             <span>{title}</span>
             <span>
               <Cursor />
@@ -67,12 +107,16 @@ const Hero = () => {
             <BublyButton />
           </div>
         </div>
-        <div className=" hidden md:flex">
+        <div
+          className=" hidden md:flex box"
+          data-aos="fade-up-left"
+          ref={boxRef} 
+        >
           <Image
             src="/menn.jpg"
             alt="Ellipse"
             id="EllipseRoot"
-            className=" rounded-full bg-background"
+            className="rounded-full bg-background"
             width={400}
             height={400}
           />
