@@ -11,7 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Projects = () => {
   return (
-    <div className="container mx-auto my-4 md:my-12">
+    <div className="container mx-auto pt-16 md:pt-24">
       <h1 className="text-3xl md:text-5xl font-bold">Projects</h1>
       <div>
         <Tabs defaultValue="fullstack" className="w-full my-4 md:my-12">

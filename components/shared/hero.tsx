@@ -80,7 +80,7 @@ useGSAP(
   };
 
   return (
-    <div className=" container mx-auto" ref={boxRef} >
+    <div className=" container mx-auto py-8 md:py-12" ref={boxRef} >
       <div className="md:flex flex-row justify-start md:justify-between items-center py-7">
         <div className=" md:w-1/2 w-full flex flex-col justify-center md:flex md:justify-start">
           <h1

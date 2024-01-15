@@ -2,7 +2,7 @@ import { Separator } from "@/components/ui/separator";
 
 const Blog = () => {
   return (
-    <div className="container mx-auto w-full md:w-2/3 my-4 md:my-16 ">
+    <div className="container mx-auto w-full md:w-2/3  my-6 md:my-12 ">
       <h1 className="text-3xl md:text-5xl font-['Heebo'] font-bold leading-[60px] text-[#21243d] dark:text-slate-500">
         Blog
       </h1>

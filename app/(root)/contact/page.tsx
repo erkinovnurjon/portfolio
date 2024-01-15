@@ -47,7 +47,7 @@ const Contact: FC = () => {
   }, [isFormSubmitted]);
 
   return (
-    <div className=" container mx-auto my-6">
+    <div className=" container mx-auto my-6 md:my-14">
       <h1 className="text-4xl font-['Heebo']  text-[#21243d] dark:text-slate-500 text-center font-bold ">
         Contact me
       </h1>
