@@ -1,5 +1,3 @@
-"use client"
-
 import Dashboard from "@/components/shared/dashboard";
 import Feauture from "@/components/shared/feauture";
 import Hero from "@/components/shared/hero";

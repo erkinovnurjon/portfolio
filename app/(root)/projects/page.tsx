@@ -3,7 +3,7 @@ import Matras from "@/components/shared/projects/matras";
 import Movie from "@/components/shared/projects/movie";
 import NajotTalim from "@/components/shared/projects/najot-talim";
 import Netflix from "@/components/shared/projects/netflix";
-import Boomshop from "@/components/shared/projects/node";
+import Boomshop from "@/components/shared/projects/boom-shop";
 import Robot from "@/components/shared/projects/robo";
 import Shop from "@/components/shared/projects/shop";
 import Youtube from "@/components/shared/projects/tube";
