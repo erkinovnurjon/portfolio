@@ -54,7 +54,7 @@ const Boomshop = () => {
 
           <Button variant={"default"} className="  my-3">
             <Link
-              href={"youtube-clone-drab-six.vercel.app"}
+              href={"https://github.com/erkinovnurjon/boom-shop"}
               className=" flex gap-3"
             >
               Open Project
@@ -64,7 +64,7 @@ const Boomshop = () => {
 
           <Button variant={"default"}>
             <Link
-              href={"https://github.com/erkinovnurjon/youtube-clone"}
+              href={"https://github.com/erkinovnurjon/boom-shop"}
               className=" flex gap-3  "
             >
               Open Code

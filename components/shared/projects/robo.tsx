@@ -20,7 +20,7 @@ import Link from "next/link";
 const Robot = () => {
   return (
     <div className="card">
-      <h1 className=" md:py-4 py-2 md:text-4xl text-xl">Najot Talim </h1>
+      <h1 className=" md:py-4 py-2 md:text-4xl text-xl">Prime Shop </h1>
       <div className=" flex justify-between md:flex-row md:gap-16 gap-0  flex-col">
         <Carousel className="w-full ">
           <CarouselContent className="flex md:flex-row   md:items-start ">
@@ -44,10 +44,9 @@ const Robot = () => {
         <div className=" flex flex-col space-y-4 w-full border my-4 md:w-1/2 h-full dark:bg-gradient-to-t dark:from-black dark:to-violet-900 p-7 md:p-8 rounded-xl  ">
           <h1 className="text-2xl font-bold">About the project</h1>
           <p>
-            This is a clone version of Najot Talim's official website. This task
-            was given in the competition between Frontend programmers in Najot
-            Talim. And our team won the 3rd place. The project did not use
-            redundant libraries, everything was compiled from 0
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ut
+            asperiores vel dolorem. Alias tenetur rem quia quibusdam suscipit
+            numquam vel porro rerum.
           </p>
 
           <Button variant={"default"} className="  my-3">

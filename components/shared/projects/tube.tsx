@@ -51,7 +51,7 @@ const Youtube = () => {
 
           <Button variant={"default"} className="  my-3">
             <Link
-              href={"youtube-clone-drab-six.vercel.app"}
+              href={"https://youtube-clone-drab-six.vercel.app/"}
               className=" flex gap-3"
             >
               Open Project

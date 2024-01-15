@@ -18,7 +18,7 @@ import Link from "next/link";
 const Movie = () => {
   return (
     <div className="card">
-      <h1 className=" md:py-4 py-2 md:text-4xl text-xl">Movie</h1>
+      <h1 className=" md:py-4 py-2 md:text-4xl text-xl">Movie app</h1>
       <div className=" flex justify-between md:flex-row md:gap-16 gap-0  flex-col">
         <Carousel className="w-full ">
           <CarouselContent className="flex md:flex-row   md:items-start ">
@@ -58,7 +58,7 @@ const Movie = () => {
 
           <Button variant={"default"}>
             <Link
-              href={"https://github.com/erkinovnurjon/youtube-clone"}
+              href={"https://github.com/erkinovnurjon/vue3-movie-app-small-"}
               className=" flex gap-3  "
             >
               Open Code
