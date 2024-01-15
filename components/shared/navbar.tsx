@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" w-full  h-[10vh]   bg-[#EDEDED] dark:bg-black  flex items-center">
+    <div className=" w-full  h-[10vh]   bg-[#EDF7FA] dark:bg-black  flex items-center">
       <div className="container mx-auto flex items-center justify-between ">
         <Link href={"/"}>
           {/* <Image src={'/logoo.jpg'} alt='logo' width={142} height={142} className=' rounded' /> */}
