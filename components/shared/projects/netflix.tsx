@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Carousel,
   CarouselContent,
@@ -16,17 +18,27 @@ import net4 from "@/public/netflix/net5.png";
 import { GitHubLogoIcon, PlayIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
+import Autoplay from "embla-carousel-autoplay";
+import React from "react";
 
 const Netflix = () => {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
   return (
     <div className="card">
       <h1 className=" md:py-4 py-2 md:text-4xl text-xl">
         Netflix Clone Version
       </h1>
       <div className=" flex justify-between md:flex-row md:gap-16 gap-0  flex-col">
-        <Carousel className="w-full ">
+        <Carousel
+          plugins={[plugin.current]}
+          className="w-[88%] mx-auto"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+        >
           <CarouselContent className="flex md:flex-row   md:items-start ">
-            {googleImages.map((item) => (
+            {mapImages.map((item) => (
               <CarouselItem key={item.id}>
                 <div className="p-1">
                   <Image
@@ -40,8 +52,10 @@ const Netflix = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <div className="block mx-auto">
+            <CarouselPrevious />
+            <CarouselNext />
+          </div>
         </Carousel>
         <div className=" flex flex-col space-y-4 w-full border my-4 md:w-1/2 h-full dark:bg-gradient-to-t dark:from-black dark:to-violet-900 p-7 md:p-8 rounded-xl  ">
           <h1 className="text-2xl font-bold">About the project</h1>
@@ -78,7 +92,7 @@ const Netflix = () => {
 
 export default Netflix;
 
-const googleImages = [
+const mapImages = [
   {
     img: net,
     id: 1,

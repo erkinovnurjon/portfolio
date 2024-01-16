@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Carousel,
   CarouselContent,
@@ -7,24 +9,35 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import google from "@/public/google-1.png";
-import googl from "@/public/google-2.png";
-import goog from "@/public/g.png";
+import googl from "@/public/googleee.png";
+import goog from "@/public/ggg.png";
 import goo from "@/public/google-4.png";
 import go from "@/public/google-5.png";
 import gogle from "@/public/gogle.png";
+import Autoplay from "embla-carousel-autoplay";
 
 import { GitHubLogoIcon, PlayIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
+
 
 const GoogleDrive = () => {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
   return (
     <div className="card">
       <h1 className=" md:py-4 py-2 md:text-4xl text-xl">
         Google Drive Clone Version
       </h1>
-      <div className=" flex justify-between md:flex-row md:gap-16 gap-0  flex-col">
-        <Carousel className="w-full ">
+      <div className=" flex justify-between  md:flex-row md:gap-16 gap-0  flex-col">
+        <Carousel
+          plugins={[plugin.current]}
+          className="w-[88%] mx-auto"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+        >
           <CarouselContent className="flex md:flex-row   md:items-start ">
             {googleImages.map((item) => (
               <CarouselItem key={item.id}>
@@ -40,8 +53,8 @@ const GoogleDrive = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="container mx-auto">
-            <CarouselPrevious />
+          <div className="block mx-auto">
+            <CarouselPrevious className="w-4 h-4 md:w-6 md:h-6 " />
             <CarouselNext />
           </div>
         </Carousel>

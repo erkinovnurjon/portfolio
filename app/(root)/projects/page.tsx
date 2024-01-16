@@ -11,7 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Projects = () => {
   return (
-    <div className="container mx-auto pt-16 md:pt-24">
+    <div className="container mx-auto pt-4 md:pt-8">
       <h1 className="text-3xl md:text-5xl font-bold">Projects</h1>
       <div>
         <Tabs defaultValue="fullstack" className="w-full my-4 md:my-12">
@@ -19,8 +19,8 @@ const Projects = () => {
             <TabsTrigger value="fullstack">Full Stack</TabsTrigger>
             <TabsTrigger value="react">React</TabsTrigger>
             <TabsTrigger value="next">NextJs</TabsTrigger>
-            <TabsTrigger value="vue">Vue</TabsTrigger>
-            <TabsTrigger value="node">NodeJs</TabsTrigger>
+            <TabsTrigger value="vue" >Vue</TabsTrigger>
+            <TabsTrigger value="node" className="md:flex hidden">NodeJs</TabsTrigger>
           </TabsList>
           <TabsContent value="fullstack" className=" w-full ">
             <GoogleDrive />
