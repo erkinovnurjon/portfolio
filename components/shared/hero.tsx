@@ -13,16 +13,6 @@ import gsap from "gsap";
 const Hero = () => {
   const boxRef = useRef(null);
 
-  // useGSAP(() => {
-  //   gsap.from(textRef.current, {
-  //     opacity: 0,
-  //     x: -100,
-  //     rotation: -360,
-  //     duration: 1,
-  //     ease: 'power.out',
-  //   });
-  // }, { scope: textRef });
-
   useGSAP(
     () => {
       gsap.from(boxRef.current, {
@@ -91,7 +81,7 @@ const Hero = () => {
               <Cursor />
             </span>
           </h1>
-          <p className="font-[Heebo] text-xs py-1 md:py-4 md:text-2xl text-[#21243d] dark:text-[#e3e3f19f] text-center md:text-start  md:w-2/3 pt-5">
+          <p className="font-[Heebo] text-[16px] py-1 md:py-4 md:text-2xl text-[#21243d] dark:text-[#e3e3f19f] text-center md:text-start  md:w-2/3 pt-5">
             Hello. I am a junior front-end developer. A year ago, I started
             studying at the "Na'jot Ta'lim" training center. My interest in
             programming started from watching the work of my classmates at the
@@ -99,7 +89,7 @@ const Hero = () => {
           </p>
           <div
             role="button"
-            className="   my-4 md:my-6"
+            className="  w-3/2 md:w-full my-4 md:my-6"
             onClick={handleDownload}
           >
             <BublyButton />
