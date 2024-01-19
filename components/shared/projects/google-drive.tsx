@@ -15,40 +15,50 @@ import goo from "@/public/google-4.png";
 import go from "@/public/google-5.png";
 import gogle from "@/public/gogle.png";
 import Autoplay from "embla-carousel-autoplay";
-
 import { GitHubLogoIcon, PlayIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Loader from "../loader";
 
 
 const GoogleDrive = () => {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
+  const [loader, setLoader] = useState(true);
+
+ useEffect(() => {
+   setLoader(false)
+ }, []);
+
   return (
     <div className="card">
-      <h1 className=" md:py-4 py-2 md:text-4xl text-xl">
+      <h1 className="md:py-4 py-2 md:text-4xl text-xl">
         Google Drive Clone Version
       </h1>
-      <div className=" flex justify-between  md:flex-row md:gap-16 gap-0  flex-col">
+      <div className="flex justify-between md:flex-row md:gap-16 gap-0 flex-col">
         <Carousel
           plugins={[plugin.current]}
           className="w-[88%] mx-auto"
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
-          <CarouselContent className="flex md:flex-row   md:items-start ">
+          <CarouselContent className="flex md:flex-row md:items-start">
             {googleImages.map((item) => (
               <CarouselItem key={item.id}>
                 <div className="p-1">
-                  <Image
-                    src={item.img}
-                    alt="img"
-                    width={800}
-                    height={500}
-                    className=" w-full md:w-[800px]"
-                  />
+                  {loader ? (
+                    <Loader /> 
+                  ) : (
+                    <Image
+                      src={item.img}
+                      alt="img"
+                      width={800}
+                      height={500}
+                      className="w-full md:w-[800px]"
+                    />
+                  )}
                 </div>
               </CarouselItem>
             ))}
@@ -58,19 +68,21 @@ const GoogleDrive = () => {
             <CarouselNext />
           </div>
         </Carousel>
-        <div className=" flex flex-col space-y-4 border w-full my-4 md:w-1/2 h-full dark:bg-gradient-to-t dark:from-black dark:to-violet-900 p-7 md:p-8 rounded-xl  ">
-          <h1 className="text-2xl font-bold">About the project</h1>
+        <div className="flex flex-col space-y-4 border w-full my-4 md:w-1/2 h-full dark:bg-gradient-to-t dark:from-black dark:to-violet-900 p-3 md:p-8 rounded-xl">
+          <h1 className="text-[16px] md:text-2xl font-bold">
+            About the project
+          </h1>
           <p>
-            In the Google Drive project I used version 14 of NextJs, FireBase
+            In the Google Drive project, I used version 14 of NextJs, Firebase
             Platform for data storage, Stripe Platform for Authorization, I used
-            the shadcn/ui library for the UI part and the Tailwind.Css library
-            for the styling
+            the shadcn/ui library for the UI part, and the Tailwind.Css library
+            for styling
           </p>
 
-          <Button variant={"default"} className="  my-3">
+          <Button variant={"default"} className="my-3">
             <Link
               href={"https://google-drive-erkinov.netlify.app/"}
-              className=" flex gap-3"
+              className="flex gap-3"
             >
               Open Project
               <PlayIcon className="h-5 w-5" />
@@ -80,7 +92,7 @@ const GoogleDrive = () => {
           <Button variant={"default"}>
             <Link
               href={"https://github.com/erkinovnurjon/google-drive"}
-              className=" flex gap-3  "
+              className="flex gap-3 "
             >
               Open Code
               <GitHubLogoIcon className="h-5 w-5" />

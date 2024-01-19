@@ -19,17 +19,24 @@ import { GitHubLogoIcon, PlayIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Loader from "../loader";
 
 const NajotTalim = () => {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
+
+    const [loader, setLoader] = useState(true);
+
+    useEffect(() => {
+      setLoader(false);
+    }, []);
   return (
     <div className="card">
       <h1 className=" md:py-4 py-2 md:text-4xl text-xl">Najot Talim </h1>
       <div className=" flex justify-between md:flex-row md:gap-16 gap-0  flex-col">
-      <Carousel
+        <Carousel
           plugins={[plugin.current]}
           className="w-[88%] mx-auto"
           onMouseEnter={plugin.current.stop}
@@ -39,13 +46,17 @@ const NajotTalim = () => {
             {najotImages.map((item) => (
               <CarouselItem key={item.id}>
                 <div className="p-1">
-                  <Image
-                    src={item.img}
-                    alt="img"
-                    width={800}
-                    height={500}
-                    className=" w-full md:w-[800px]"
-                  />
+                  {loader ? (
+                    <Loader />
+                  ) : (
+                    <Image
+                      src={item.img}
+                      alt="img"
+                      width={800}
+                      height={500}
+                      className="w-full md:w-[800px]"
+                    />
+                  )}
                 </div>
               </CarouselItem>
             ))}
