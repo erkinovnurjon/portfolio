@@ -27,6 +27,7 @@ const GoogleDrive = () => {
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
   const [loader, setLoader] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
  useEffect(() => {
    setLoader(false)
@@ -34,7 +35,7 @@ const GoogleDrive = () => {
 
   return (
     <div className="card">
-      <h1 className="md:py-4 py-2 md:text-4xl text-xl ">
+      <h1 className="md:py-4 py-2 md:text-4xl text-xl">
         Google Drive Clone Version
       </h1>
       <div className="flex justify-between md:flex-row md:gap-16 gap-0 flex-col">
@@ -53,10 +54,16 @@ const GoogleDrive = () => {
                   ) : (
                     <Image
                       src={item.img}
-                      alt="img"
+                        alt="img"
+                        
                       width={800}
                       height={500}
-                      className="w-full md:w-[800px]"
+                      className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
+                        isLoading
+                          ? "scale-110 blur-2xl grayscale"
+                          : "scale-100 blur-0 grayscale-0"
+                      }}`}
+                      onLoadingComplete={() => setIsLoading(false)}
                     />
                   )}
                 </div>
@@ -69,9 +76,7 @@ const GoogleDrive = () => {
           </div>
         </Carousel>
         <div className="flex flex-col space-y-4 border w-full my-4 md:w-1/2 h-full dark:bg-gradient-to-t dark:from-black dark:to-violet-900 p-3 md:p-8 rounded-xl">
-          <h1 className="text-xl md:text-2xl font-bold">
-            About the project
-          </h1>
+          <h1 className="text-xl md:text-2xl font-bold">About the project</h1>
           <p className="text-sm md:text-[16px]">
             In the Google Drive project, I used version 14 of NextJs, Firebase
             Platform for data storage, Stripe Platform for Authorization, I used

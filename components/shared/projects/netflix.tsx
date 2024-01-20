@@ -26,7 +26,8 @@ const Netflix = () => {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
-    const [loader, setLoader] = useState(true);
+  const [loader, setLoader] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
       setLoader(false);
@@ -55,7 +56,12 @@ const Netflix = () => {
                       alt="img"
                       width={800}
                       height={500}
-                      className="w-full md:w-[800px]"
+                      className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
+                        isLoading
+                          ? "scale-110 blur-2xl grayscale"
+                          : "scale-100 blur-0 grayscale-0"
+                      }}`}
+                      onLoadingComplete={() => setIsLoading(false)}
                     />
                   )}
                 </div>
