@@ -7,6 +7,7 @@ import Link from "next/link";
 import { AlignJustify } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import Logo from "./logo";
+import MenuBar from "./menu-bar";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -49,18 +50,10 @@ const Navbar = () => {
               </PopoverContent>
             </Popover>
           </div>
+          <div className="md:flex hidden">
+          <MenuBar />
 
-          <ul className="md:flex justify-end items-center hidden text-xl font-[Heebo] gap-5 font-medium w-min">
-            <Link href={"/projects"} className=" hover:underline transition">
-              projects
-            </Link>
-            <Link href={"/blog"} className=" hover:underline transition">
-              blog
-            </Link>
-            <Link href={"/contact"} className=" hover:underline transition">
-              contact
-            </Link>
-          </ul>
+          </div>
           <ModeToggle />
         </div>
       </div>
