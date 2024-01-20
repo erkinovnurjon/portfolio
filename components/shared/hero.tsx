@@ -34,7 +34,7 @@ const Hero = () => {
   );
   //title
   const [title] = useTypewriter({
-    words: ["Software Engineer ", "Frontend Developer", "Krasavchik"],
+    words: ["Software Engineer ", "Frontend Developer"],
     // @ts-ignore
     loop: {},
     typeSpeed: 120,
@@ -97,7 +97,6 @@ const Hero = () => {
         </div>
         <div
           className=" hidden md:flex box"
-          data-aos="fade-up-left"
           ref={boxRef}
         >
           <Image

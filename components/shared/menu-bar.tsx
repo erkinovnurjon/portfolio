@@ -11,12 +11,12 @@ const MenuBar = () => {
       </li>
       <li>
         <Link href={"/blog"} className="link  ">
-          Blogs
+          Blog
         </Link>
       </li>
       <li>
         <Link href={"/contact"} className="link">
-          Services
+          Contact
         </Link>
       </li>
     </ul>
