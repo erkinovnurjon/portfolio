@@ -27,7 +27,17 @@ const Shop = () => {
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
   const [loader, setLoader] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(
+    Array(mapImages.length).fill(true)
+  );
+
+  const handleImageLoad = (index: any) => {
+    setIsLoading((prev) => {
+      const newState = [...prev];
+      newState[index] = false;
+      return newState;
+    });
+  };
 
   useEffect(() => {
     setLoader(false);
@@ -43,7 +53,7 @@ const Shop = () => {
           onMouseLeave={plugin.current.reset}
         >
           <CarouselContent className="flex md:flex-row   md:items-start ">
-            {robotImages.map((item) => (
+            {mapImages.map((item, index) => (
               <CarouselItem key={item.id}>
                 <div className="p-1">
                   {loader ? (
@@ -55,11 +65,11 @@ const Shop = () => {
                       width={800}
                       height={500}
                       className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
-                        isLoading
+                        isLoading[index]
                           ? "scale-110 blur-2xl grayscale"
                           : "scale-100 blur-0 grayscale-0"
-                      }}`}
-                      onLoadingComplete={() => setIsLoading(false)}
+                      }`}
+                      onLoadingComplete={() => handleImageLoad(index)}
                     />
                   )}
                 </div>
@@ -106,7 +116,7 @@ const Shop = () => {
 
 export default Shop;
 
-const robotImages = [
+const mapImages = [
   {
     img: shop1,
     id: 1,

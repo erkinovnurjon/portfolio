@@ -26,12 +26,18 @@ const Youtube = () => {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
-  const [loader, setLoader] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(
+    Array(mapImages.length).fill(true)
+  );
 
-  useEffect(() => {
-    setLoader(false);
-  }, []);
+  const handleImageLoad = (index: any) => {
+    setIsLoading((prev) => {
+      const newState = [...prev];
+      newState[index] = false;
+      return newState;
+    });
+  };
+
   return (
     <div className="card">
       <h1 className=" md:py-4 py-2 md:text-4xl text-xl">Youtube</h1>
@@ -43,25 +49,22 @@ const Youtube = () => {
           onMouseLeave={plugin.current.reset}
         >
           <CarouselContent className="flex md:flex-row   md:items-start ">
-            {mapImages.map((item) => (
+            {mapImages.map((item, index) => (
               <CarouselItem key={item.id}>
                 <div className="p-1">
-                  {loader ? (
-                    <Loader />
-                  ) : (
-                    <Image
-                      src={item.img}
-                      alt="img"
-                      width={800}
-                      height={500}
-                      className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
-                        isLoading
-                          ? "scale-110 blur-2xl grayscale"
-                          : "scale-100 blur-0 grayscale-0"
-                      }}`}
-                      onLoadingComplete={() => setIsLoading(false)}
-                    />
-                  )}
+                  {isLoading[index] && <Loader />}
+                  <Image
+                    src={item.img}
+                    alt="img"
+                    width={800}
+                    height={500}
+                    className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
+                      isLoading[index]
+                        ? "scale-110 blur-2xl grayscale"
+                        : "scale-100 blur-0 grayscale-0"
+                    }`}
+                    onLoadingComplete={() => handleImageLoad(index)}
+                  />
                 </div>
               </CarouselItem>
             ))}

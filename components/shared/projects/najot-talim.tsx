@@ -28,7 +28,17 @@ const NajotTalim = () => {
   );
 
   const [loader, setLoader] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(
+    Array(mapImages.length).fill(true)
+  );
+
+  const handleImageLoad = (index: any) => {
+    setIsLoading((prev) => {
+      const newState = [...prev];
+      newState[index] = false;
+      return newState;
+    });
+  };
 
     useEffect(() => {
       setLoader(false);
@@ -44,7 +54,7 @@ const NajotTalim = () => {
           onMouseLeave={plugin.current.reset}
         >
           <CarouselContent className="flex md:flex-row   md:items-start ">
-            {najotImages.map((item) => (
+            {mapImages.map((item, index) => (
               <CarouselItem key={item.id}>
                 <div className="p-1">
                   {loader ? (
@@ -56,11 +66,11 @@ const NajotTalim = () => {
                       width={800}
                       height={500}
                       className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
-                        isLoading
+                        isLoading[index]
                           ? "scale-110 blur-2xl grayscale"
                           : "scale-100 blur-0 grayscale-0"
-                      }}`}
-                      onLoadingComplete={() => setIsLoading(false)}
+                      }`}
+                      onLoadingComplete={() => handleImageLoad(index)}
                     />
                   )}
                 </div>
@@ -108,7 +118,7 @@ const NajotTalim = () => {
 
 export default NajotTalim;
 
-const najotImages = [
+const mapImages = [
   {
     img: najot,
     id: 1,
