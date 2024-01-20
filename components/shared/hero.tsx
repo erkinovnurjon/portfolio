@@ -63,7 +63,7 @@ const Hero = () => {
         toast({
           title: "Error",
           description: "bu avval downloaded",
-          action: <ToastAction altText="Try again">Try again</ToastAction>,
+          // action: <ToastAction className="w-1/4 md:max-w-28" altText="Try again">Try again</ToastAction>,
         });
       }
     }, 7000);
