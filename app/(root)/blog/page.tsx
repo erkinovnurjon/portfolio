@@ -70,11 +70,11 @@ const Blog = () => {
         </h1>
         <div className="flex flex-row gap-6 w-full py-1 md:py-2 font-['Heebo'] items-center">
           <span className="text-sm md:text-xl font-['Heebo']  text-[#21243d] dark:text-slate-500 mb-0">
-            12 Feb 2019
+            4 Dec 2023
           </span>
           <Separator className="h-6 " orientation="vertical" />
           <span className=" text-sm md:text-xl text-slate-500 font-thin">
-            Express Handlebars
+            10 Jan 2024
           </span>
         </div>
         <p className="font-['Heebo'] text-xs md:text-xl text-[#21243d] dark:text-slate-500 w-full">

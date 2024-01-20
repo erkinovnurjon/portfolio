@@ -34,7 +34,7 @@ const GoogleDrive = () => {
 
   return (
     <div className="card">
-      <h1 className="md:py-4 py-2 md:text-4xl text-xl">
+      <h1 className="md:py-4 py-2 md:text-4xl text-xl ">
         Google Drive Clone Version
       </h1>
       <div className="flex justify-between md:flex-row md:gap-16 gap-0 flex-col">
