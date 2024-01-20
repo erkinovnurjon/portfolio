@@ -41,7 +41,7 @@ const Projects = () => {
           <TabsContent value="vue" className=" w-full">
             <div>
               <Youtube />
-              <Movie />
+              {/* <Movie /> */}
             </div>
           </TabsContent>
           <TabsContent value="node" className=" w-full">

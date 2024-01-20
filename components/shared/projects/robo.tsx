@@ -66,8 +66,8 @@ const Robot = () => {
           </div>
         </Carousel>
         <div className=" flex flex-col space-y-4 w-full border my-4 md:w-1/2 h-full dark:bg-gradient-to-t dark:from-black dark:to-violet-900 p-7 md:p-8 rounded-xl  ">
-          <h1 className="text-2xl font-bold">About the project</h1>
-          <p>
+          <h1 className="md:text-2xl text-xl font-bold">About the project</h1>
+          <p className="text-sm md:text-[16px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ut
             asperiores vel dolorem. Alias tenetur rem quia quibusdam suscipit
             numquam vel porro rerum.

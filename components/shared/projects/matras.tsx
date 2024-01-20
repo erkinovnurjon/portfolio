@@ -33,7 +33,7 @@ const Matras = () => {
   }, []);
   return (
     <div className="card">
-      <h1 className=" md:py-4 py-2 my-5 md:text-4xl text-xl">Matras </h1>
+      <h1 className=" md:py-4 py-2 my-1 md:text-4xl text-xl">Matras </h1>
       <div className=" flex justify-between  md:flex-row md:gap-16 gap-0  flex-col">
         <Carousel
           plugins={[plugin.current]}
@@ -65,15 +65,15 @@ const Matras = () => {
             <CarouselNext />
           </div>
         </Carousel>
-        <div className=" flex flex-col space-y-4 border w-full my-4 md:w-1/2 h-full dark:bg-gradient-to-t dark:from-black dark:to-violet-900 p-7 md:p-8 rounded-xl  ">
-          <h1 className="text-2xl font-bold">About the project</h1>
-          <p>
+        <div className=" flex flex-col space-y-4 border w-full my-4 md:w-1/2 h-full dark:bg-gradient-to-t dark:from-black dark:to-violet-900 p-4 md:p-8 rounded-xl  ">
+          <h1 className="md:text-2xl text-xl font-bold">About the project</h1>
+          <p className=" text-sm md:text-[16px]">
             This project was made by me and 2 of my friends, When we were
             finishing the course, we were given this project for the exam. and
             We did well in the exam
           </p>
 
-          <Button variant={"default"} className="  my-3">
+          <Button variant={"default"} className=" my-1  md:my-3">
             <Link
               href={"https://google-drive-erkinov.netlify.app/"}
               className=" flex gap-3"

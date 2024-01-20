@@ -49,7 +49,7 @@ const GoogleDrive = () => {
               <CarouselItem key={item.id}>
                 <div className="p-1">
                   {loader ? (
-                    <Loader /> 
+                    <Loader />
                   ) : (
                     <Image
                       src={item.img}
@@ -69,10 +69,10 @@ const GoogleDrive = () => {
           </div>
         </Carousel>
         <div className="flex flex-col space-y-4 border w-full my-4 md:w-1/2 h-full dark:bg-gradient-to-t dark:from-black dark:to-violet-900 p-3 md:p-8 rounded-xl">
-          <h1 className="text-[16px] md:text-2xl font-bold">
+          <h1 className="text-xl md:text-2xl font-bold">
             About the project
           </h1>
-          <p>
+          <p className="text-sm md:text-[16px]">
             In the Google Drive project, I used version 14 of NextJs, Firebase
             Platform for data storage, Stripe Platform for Authorization, I used
             the shadcn/ui library for the UI part, and the Tailwind.Css library
