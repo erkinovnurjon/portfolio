@@ -62,7 +62,7 @@ const Hero = () => {
       } else {
         toast({
           title: "Error",
-          description: "bu avval downloaded",
+          description: "sizda ruxsat yo'q",
           // action: <ToastAction className="w-1/4 md:max-w-28" altText="Try again">Try again</ToastAction>,
         });
       }
