@@ -26,6 +26,7 @@ const Youtube = () => {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
+  const [loader, setLoader] = useState(true);
   const [isLoading, setIsLoading] = useState(
     Array(mapImages.length).fill(true)
   );
@@ -38,6 +39,9 @@ const Youtube = () => {
     });
   };
 
+  useEffect(() => {
+    setLoader(false);
+  }, []);
   return (
     <div className="card">
       <h1 className=" md:py-4 py-2 md:text-4xl text-xl">Youtube</h1>
@@ -52,19 +56,22 @@ const Youtube = () => {
             {mapImages.map((item, index) => (
               <CarouselItem key={item.id}>
                 <div className="p-1">
-                  {isLoading[index] && <Loader />}
-                  <Image
-                    src={item.img}
-                    alt="img"
-                    width={800}
-                    height={500}
-                    className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
-                      isLoading[index]
-                        ? "scale-110 blur-2xl grayscale"
-                        : "scale-100 blur-0 grayscale-0"
-                    }`}
-                    onLoadingComplete={() => handleImageLoad(index)}
-                  />
+                  {loader ? (
+                    <Loader />
+                  ) : (
+                    <Image
+                      src={item.img}
+                      alt="img"
+                      width={800}
+                      height={500}
+                      className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
+                        isLoading[index]
+                          ? "scale-110 blur-2xl grayscale"
+                          : "scale-100 blur-0 grayscale-0"
+                      }`}
+                      onLoadingComplete={() => handleImageLoad(index)}
+                    />
+                  )}
                 </div>
               </CarouselItem>
             ))}

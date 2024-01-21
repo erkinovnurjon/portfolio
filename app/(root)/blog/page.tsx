@@ -8,7 +8,7 @@ const Blog = () => {
       </h1>
       <div className="flex flex-col my-3 md:my-6 p-4 rounded-xl border shadow">
         <h1 className="text-2xl md:text-2xl font-['Heebo'] py-2 md:py-3 font-medium text-[#21243d] dark:text-slate-500 ">
-          Na'jot Ta'lim
+          Frontend Developer
         </h1>
         <div className="flex flex-row gap-6 w-full py-1 md:py-2 font-['Heebo'] items-center">
           <span className="text-sm md:text-xl text-[#21243d] dark:text-slate-500 mb-0">
@@ -27,7 +27,7 @@ const Blog = () => {
       </div>
       <div className="flex flex-col my-3 md:my-6 p-4 rounded-xl border shadow">
         <h1 className="text-2xl md:text-2xl font-['Heebo'] py-2 md:py-3 font-medium text-[#21243d] dark:text-slate-500 ">
-          MohirDev
+          TypeScript
         </h1>
         <div className="flex flex-row gap-6 w-full py-1 md:py-2 font-['Heebo'] items-center">
           <span className="text-sm md:text-xl text-[#21243d] dark:text-slate-500 mb-0">
