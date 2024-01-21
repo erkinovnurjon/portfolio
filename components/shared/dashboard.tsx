@@ -20,9 +20,9 @@ const Dashboard = () => {
 
           <div>
             <h1 className="text-3xl font-['Heebo'] text-center md:text-start font-bold text-[#21243d] dark:text-white/70 py-5 ">
-              <Link href={"https://github.com/erkinovnurjon"}>
+              
                 Github Profile
-              </Link>
+              
             </h1>
             <div className=" flex gap-5 justify-center md:justify-start py-2">
               <div className="bg-[#142850] flex items-center justify-center w-16 h-8  rounded-lg">
@@ -30,7 +30,7 @@ const Dashboard = () => {
                   2023
                 </span>
               </div>
-              <span className="text-xl font-['Heebo'] text-[#8695a4] dark:text-white/70 ">
+              <span className="text-xl hover:underline transition font-['Heebo'] text-[#8695a4] dark:text-white/70 ">
                 <Link href={"https://github.com/erkinovnurjon"}>Profile</Link>
               </span>
             </div>
