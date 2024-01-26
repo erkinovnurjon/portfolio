@@ -93,7 +93,7 @@ const JiraNuxt = () => {
 
           <Button variant={"default"} className="my-3">
             <Link
-              href={"https://google-drive-erkinov.netlify.app/"}
+              href={"https://jira-software-git-master-erkinovnurjon.vercel.app/"}
               className="flex gap-3"
             >
               Open Project
@@ -103,7 +103,7 @@ const JiraNuxt = () => {
 
           <Button variant={"default"}>
             <Link
-              href={"https://github.com/erkinovnurjon/google-drive"}
+              href={"https://github.com/erkinovnurjon/portfolio"}
               className="flex gap-3 "
             >
               Open Code
