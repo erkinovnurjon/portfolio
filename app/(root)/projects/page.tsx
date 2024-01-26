@@ -8,6 +8,7 @@ import Robot from "@/components/shared/projects/robo";
 import Shop from "@/components/shared/projects/shop";
 import Youtube from "@/components/shared/projects/tube";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import JiraNuxt from "@/components/shared/projects/jira-nuxt";
 
 const Projects = () => {
   return (
@@ -44,8 +45,8 @@ const Projects = () => {
           </TabsContent>
           <TabsContent value="vue" className=" w-full">
             <div>
+              <JiraNuxt />
               <Youtube />
-              {/* <Movie /> */}
             </div>
           </TabsContent>
           <TabsContent value="node" className=" w-full">
